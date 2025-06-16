@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Letterflip | Wordle, maar dan nét anders</title>
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="../assets/img/pinkiepielongicon.gif" alt="" class="een">
+    <h1 class="title">Letterflip</h1>
+    <img src="../assets/img/ptwilightlongicon.gif" alt="" class="twee">
+  </header>
+  <div class="header-line">
+    <button id="help-btn-line" class="side-btn"><img src="../assets/img/question.svg" alt="question mark icon" class="svg-question"></button>
+    <div class="line"></div>
+    <button id="hint-btn-line" class="side-btn hidden"><img src="../assets/img/lightbulb.svg" alt="hint icon" class="svg-hint"></button>
+    <button id="settings-btn-line" class="side-btn"><img src="../assets/img/settings.svg" alt="rotary knob icon" class="svg-settings"></button>
+  </div>
+
+  <main id="game">
+    <div id="grid"></div>
+    <div id="message"></div>
+
+    <div id="keyboard">
+      <div class="keyboard-row" id="row1"></div>
+      <div class="keyboard-row" id="row2"></div>
+      <div class="keyboard-row" id="row3"></div>
+    </div>
+  </main>
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div id="voorbeeld-uitleg" style="margin-top: 40px;">
+  <h2>Voorbeeld:</h2>
+  <div class="guess-row">
+    <div class="cell correct">G</div>
+    <div class="cell present">R</div>
+    <div class="cell absent">A</div>
+    <div class="cell absent">A</div>
+    <div class="cell absent">S</div>
+  </div>
+  <p>In dit voorbeeld is <span class="cell-label correct">G</span> op de juiste plek, <span class="cell-label present">R</span> zit in het woord maar op een andere plek, en de A’s en S zitten er niet in.</p>
+
+<div class="guess-row">
+  <div class="cell present">E</div>
+  <div class="cell absent">N</div>
+  <div class="cell correct">G</div>
+  <div class="cell absent">E</div>
+  <div class="cell absent">L</div>
+</div>
+<p><span class="cell-label present">E</span> zit erin maar op een andere plek, <span class="cell-label correct">G</span> zit goed, en de rest is fout.</p>
+
+  <div class="guess-row">
+    <div class="cell correct">B</div>
+    <div class="cell correct">O</div>
+    <div class="cell correct">E</div>
+    <div class="cell correct">K</div>
+    <div class="cell correct">S</div>
+  </div>
+  <p>Alle letters zijn <span class="groen">correct</span>. Je hebt het woord geraden!</p>
+</div>
+      <button id="close-modal" class="close-btn"><img src="../assets/img/arrow.svg" alt="back arrow icon" class="svg-arrow"></button>
+    </div>
+  </div>
+
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Instellingen</h2>
+      <button id="close-settings" class="close-btn"><img src="../assets/img/arrow.svg" alt="exit arrow icon" class="svg-arrow-two"></button>
+    </div>
+    <div class="modal-body">
+      <div class="setting-item">
+        <label for="dark-mode-toggle" class="setting-label">
+          <span>Donkere modus</span>
+          <div class="toggle-switch">
+            <input type="checkbox" id="dark-mode-toggle" class="toggle-input">
+            <span class="toggle-slider"></span>
+          </div>
+        </label>
+      </div>
+
+      <div class="setting-item">
+  <label class="setting-label">
+    <span>Keyboard layout</span>
+    <div class="toggle-switch">
+      <input type="checkbox" id="keyboard-toggle" class="toggle-input" checked>
+      <span class="toggle-slider"></span>
+    </div>
+  </label>
+</div>
+
+<div class="setting-item">
+  <label class="setting-label">
+    <span>Hint knop</span>
+    <div class="toggle-switch">
+      <input type="checkbox" id="hint-toggle" class="toggle-input">
+      <span class="toggle-slider"></span>
+    </div>
+  </label>
+</div>
+
+<div id="popupOverlay" class="popup-overlay">
+    <div id="popupContent" class="popup-content">
+        <p id="popupMessage"></p>
+
+        <div id="popupExtra" class="popup-extra">
+            <p><span class="letterflip-text">Letterflip</span> is gemaakt door</p>
+              <a href="https://www.linkedin.com/in/darryldejong/" target="_blank" rel="noopener noreferrer" class="made-by-link">Linkedin</a>.
+            </p>
+            <p>En de volledige code staat openbaar op
+                <a href="https://github.com/darryldejong/letterflip" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>.
+            </p>
+            <p>Bedankt
+                <a href="https://www.deviantart.com/taviturnip/art/Free-Element-Bearers-Icons-485132396" 
+     target="_blank" rel="noopener noreferrer" class="credit-link">TaviTurnip</a> 
+  voor het mogen gebruiken van de assets in dit project.
+</p>
+        </div>
+
+        <button id="closePopupButton" class="close-btn"><img src="../assets/img/arrow.svg" alt="close popup icon" class="svg-popup"></button>
+    </div>
+</div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

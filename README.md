@@ -14,3 +14,5 @@ Clean, responsive interface designed for an engaging user experience
 
 🎯 Goal
 Guess the hidden word within a limited number of tries, using feedback from each guess to refine your strategy. Unlike traditional Wordle, this version may include alternative hints, varied letter behavior, or dynamic rule sets.
+
+![Readme image](assets/img/image.png)

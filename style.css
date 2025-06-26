@@ -9,8 +9,6 @@ body {
   background-color: #e6e6e6;
   color: #333;
   user-select: none;
-  transform: scale(0.9);
-  transform-origin: top center;
 }
 
 body.dark {
@@ -254,8 +252,6 @@ body.dark #keyboard .key.absent {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transform: scale(1.1111111);
-  transform-origin: center;
 }
 
 .modal.hidden {
@@ -669,8 +665,6 @@ body.dark #settings-modal .modal-content {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
-    transform: scale(1.1111111);
-    transform-origin: center;
 }
 
 .popup-overlay.show {

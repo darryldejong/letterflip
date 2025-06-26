@@ -9,6 +9,8 @@ body {
   background-color: #e6e6e6;
   color: #333;
   user-select: none;
+  transform: scale(1.11);
+  transform-origin: top center;
 }
 
 body.dark {

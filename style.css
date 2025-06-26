@@ -9,8 +9,6 @@ body {
   background-color: #e6e6e6;
   color: #333;
   user-select: none;
-  transform: scale(0.9);
-  transform-origin: top center;
 }
 
 body.dark {
@@ -249,7 +247,7 @@ body.dark #keyboard .key.absent {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -659,7 +657,7 @@ body.dark #settings-modal .modal-content {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;

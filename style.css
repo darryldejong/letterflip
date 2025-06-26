@@ -249,13 +249,11 @@ body.dark #keyboard .key.absent {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transform: scale(1.111);
-  transform-origin: center;
 }
 
 .modal.hidden {
@@ -661,7 +659,7 @@ body.dark #settings-modal .modal-content {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -669,8 +667,6 @@ body.dark #settings-modal .modal-content {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
-    transform: scale(1.111);
-    transform-origin: center;
 }
 
 .popup-overlay.show {

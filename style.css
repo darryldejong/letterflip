@@ -254,7 +254,7 @@ body.dark #keyboard .key.absent {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transform: scale(1.0);
+  transform: scale(1.111);
   transform-origin: center;
 }
 
@@ -669,7 +669,7 @@ body.dark #settings-modal .modal-content {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
-    transform: scale(1.0);
+    transform: scale(1.111);
     transform-origin: center;
 }
 

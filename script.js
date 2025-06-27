@@ -240,7 +240,7 @@ function handleKey(key) {
                     hidePopup();
                     resetGame();
                     isChecking = false;
-                }, 2000);
+                }, 10000);
                 return;
             }
 

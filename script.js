@@ -240,7 +240,7 @@ function handleKey(key) {
                     hidePopup();
                     resetGame();
                     isChecking = false;
-                }, 10000);
+                }, 60000);
                 return;
             }
 
@@ -256,7 +256,7 @@ function handleKey(key) {
                     hidePopup();
                     resetGame();
                     isChecking = false;
-                }, 600000);
+                }, 60000);
             } else {
                 setMessage("");
                 isChecking = false;

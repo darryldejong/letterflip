@@ -752,3 +752,9 @@ body.dark #settings-modal .modal-content {
 .line-one {
   margin-top: -5px;
 }
+
+@media (max-width: 600px) {
+  body {
+    zoom: 0.5;
+  }
+}

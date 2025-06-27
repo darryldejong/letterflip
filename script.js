@@ -34,6 +34,7 @@ const keyStatuses = {};
 const hintToggle = document.getElementById("hint-toggle");
 const hintButton = document.getElementById("hint-btn-line");
 let hintUsedForCurrentGame = false;
+let isChecking = false;
 
 function createGrid() {
     grid.innerHTML = "";
@@ -212,6 +213,7 @@ function resetGame() {
 }
 
 function handleKey(key) {
+    if (isChecking) return;
     if (key === "enter") {
         if (currentGuess.length !== WORD_LENGTH) {
             setMessage("Vul eerst 5 letters in.");
@@ -227,7 +229,7 @@ function handleKey(key) {
         }
 
         const states = checkGuess(currentGuess);
-
+        isChecking = true;
         animateRow(currentRow, currentGuess, states).then(() => {
             updateKeyboard(currentGuess, states);
 
@@ -237,6 +239,7 @@ function handleKey(key) {
                 setTimeout(() => {
                     hidePopup();
                     resetGame();
+                    isChecking = false;
                 }, 2000);
                 return;
             }
@@ -252,9 +255,11 @@ function handleKey(key) {
                 setTimeout(() => {
                     hidePopup();
                     resetGame();
+                    isChecking = false;
                 }, 600000);
             } else {
                 setMessage("");
+                isChecking = false;
             }
         });
 

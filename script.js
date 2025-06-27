@@ -246,7 +246,7 @@ function handleKey(key) {
 
             if (currentRow >= MAX_GUESSES) {
               const messageText = `<span class="message-text">Helaas, het woord was: </span>`;
-                const formattedWord = `<span class="failed">${targetWord.charAt(0).toUpperCase() + targetWord.slice(1)}</span>`;
+                const formattedWord = `<span class="failed">${targetWord.charAt(0).toUpperCase() + targetWord.slice(1)}</span><hr>`;
                 showPopup(messageText + formattedWord);
                 disableKeyboard();
                 setTimeout(() => {

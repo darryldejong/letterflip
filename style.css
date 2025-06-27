@@ -269,7 +269,7 @@ body.dark #keyboard .key.absent {
   color: #333;
   font-size: 1.15em;
   line-height: 1.4em;
-  height: 70%;
+  height: 80%;
 }
 
 body.dark .modal-content {
@@ -395,7 +395,7 @@ body.dark .modal-content {
   height: 75px;
   position: relative;
   left: 100px;
-  bottom: 25px
+  bottom: 50px
 }
 
 .svg-arrow-two {
@@ -555,14 +555,6 @@ body.dark .setting-label {
   color: white;
 }
 
-.svg-arrow {
-  width: 75px;
-  height: 75px;
-  position: relative;
-  left: 100px;
-  bottom: 25px
-}
-
 .body.dark .svg-arrow-two {
   color: white;
   background-color: white;
@@ -683,7 +675,7 @@ body.dark #settings-modal .modal-content {
     color: #333;
     font-size: 1.15em;
     line-height: 3.0em;
-    height: 60%;
+    height: 70%;
     transform: scale(0.9);
     transition: transform 0.3s ease;
 }
@@ -710,9 +702,10 @@ body.dark #settings-modal .modal-content {
 .failed {
   color: red;
   text-decoration: underline;
-  font-weight: 700;
+  text-decoration-thickness: 3px;
   font-style: italic;
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 .message-text {
@@ -754,4 +747,8 @@ body.dark #settings-modal .modal-content {
    font-weight: 700;
    font-style: italic;
    text-decoration: underline;
+}
+
+.line-one {
+  margin-top: -5px;
 }

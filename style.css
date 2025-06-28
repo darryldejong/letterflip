@@ -152,11 +152,35 @@ body.dark #grid .cell.absent {
   margin-top: 20px;
   font-weight: bold;
   min-height: 24px;
-  color: #444;
+  color: #666;
+}
+
+#message.daily {
+  color: #1a71d4;
+}
+
+#message.free-play {
+  color: #28a745;
+}
+
+#message.error {
+  color: #666;
 }
 
 body.dark #message {
-  color: #ddd;
+  color: #aaa;
+}
+
+body.dark #message.daily {
+  color: #5bb3e6;
+}
+
+body.dark #message.free-play {
+  color: #20a045;
+}
+
+body.dark #message.error {
+  color: #aaa;
 }
 
 #keyboard {
@@ -269,7 +293,7 @@ body.dark #keyboard .key.absent {
   color: #333;
   font-size: 1.15em;
   line-height: 1.4em;
-  height: 80%;
+  height: 625px;
 }
 
 body.dark .modal-content {
@@ -394,7 +418,7 @@ body.dark .modal-content {
   width: 75px;
   height: 75px;
   position: relative;
-  left: 100px;
+  left: 115px;
   bottom: 50px
 }
 
@@ -402,16 +426,34 @@ body.dark .modal-content {
   width: 75px;
   height: 75px;
   position: relative;
-  left: 60px;
-  top: 125px
+  left: 50px;
+  top: 210px
+}
+
+.svg-arrow-stats {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  left: 95px;
+  bottom: 45px;
+  cursor: pointer;
 }
 
 .svg-popup {
   position: relative;
   width: 75px;
   height: 75px;
-  left: 100px;
-  bottom: 65px;
+  left: 135px;
+  bottom: 135px;
+}
+
+.svg-popup-normal {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  left: 135px;
+  bottom: 85px;
+  cursor: pointer;
 }
 
 .text {
@@ -586,7 +628,7 @@ button img {
 
 #settings-modal .modal-content {
   max-width: 320px;
-  height: auto;
+  height: 42%;
   padding: 20px 25px;
   border-radius: 10px;
   text-align: center;
@@ -673,10 +715,9 @@ body.dark #settings-modal .modal-content {
     text-align: center;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
     color: #333;
-    font-size: 1.15em;
-    line-height: 3.0em;
-    height: 70%;
-    transform: scale(0.9);
+    font-size: 1.0em;
+    line-height: 2.0em;
+    height: 385px;
     transition: transform 0.3s ease;
 }
 
@@ -706,6 +747,9 @@ body.dark #settings-modal .modal-content {
   font-style: italic;
   font-size: 1.1em;
   font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .message-text {
@@ -753,8 +797,320 @@ body.dark #settings-modal .modal-content {
   margin-top: -5px;
 }
 
+.stats-container {
+  margin-top: 15px;
+  padding: 15px 0;
+}
+
+.stats-container h3 {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.popup-stats-title {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 6px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #1a71d4;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.75em;
+  color: #666;
+  font-weight: 600;
+}
+
+.next-game-info {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.next-game-info p {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.free-play-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Edu SA Hand', cursive;
+}
+
+.free-play-button:hover {
+  background-color: #218838;
+}
+
+.win-text {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.lose-text {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2em;
+}
+
+body.dark .stats-container h3 {
+  color: #ddd;
+}
+
+body.dark .popup-stats-title {
+  color: #ddd;
+}
+
+body.dark .stat-item {
+  background-color: #3a3a3a;
+  border-color: #555;
+}
+
+body.dark .stat-label {
+  color: #bbb;
+}
+
+body.dark .next-game-info {
+  background-color: #2a3a4a;
+}
+
+body.dark .next-game-info p {
+  color: #ddd;
+}
+
+body.dark .free-play-button {
+  background-color: #20a045;
+}
+
+body.dark .free-play-button:hover {
+  background-color: #1e8f3e;
+}
+
+.stats-button {
+  background-color: #1a71d4;
+  color: #f0f0f0;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Edu SA Hand', cursive;
+  width: 100%;
+  margin-top: 10px;
+  pointer-events: auto;
+}
+
+.modal-content .stats-button:hover {
+  background-color: #1560b8;
+}
+
+body.dark .stats-button {
+  background-color: #0d5aa7;
+}
+
+body.dark .modal-content .stats-button:hover {
+  background-color: #0a4d8f;
+}
+
+.guess-distribution {
+  margin-top: 20px;
+}
+
+.guess-distribution h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.distribution-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.guess-number {
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.distribution-bar {
+  flex: 1;
+  height: 25px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.distribution-fill {
+  height: 100%;
+  background-color: #1a71d4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  min-width: 20px;
+  transition: width 0.3s ease;
+}
+
+body.dark .guess-distribution h4 {
+  color: #ddd;
+}
+
+body.dark .guess-number {
+  color: #ddd;
+}
+
+body.dark .distribution-bar {
+  background-color: #444;
+  border-color: #666;
+}
+
+.countdown {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1a71d4;
+  margin: 6px 0;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+body.dark .countdown {
+  color: #5bb3e6;
+}
+
 @media (max-width: 600px) {
   body {
     zoom: 0.5;
   }
+}
+
+.popup-content-two {
+    background-color: rgb(255, 255, 255);
+    padding: 40px 50px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+    font-size: 1.3em;
+    line-height: 2.0em;
+    height: 600px;
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.show .popup-content-two {
+    transform: scale(1);
+}
+
+body.dark .popup-content-two {
+    background-color: #222;
+    color: #ddd;
+}
+
+.stat-number.percentage-red {
+  color: #dc3545;
+}
+
+.stat-number.percentage-green {
+  color: #28a745;
+}
+
+.stat-number.percentage-light-green {
+  color: #20c997;
+}
+
+.stat-number.percentage-full-green {
+  color: #198754;
+}
+
+.word-orange {
+  color: #ff8c00;
+  font-weight: bold;
+}
+
+.popup-content hr,
+.popup-content-two hr,
+.popup-statics hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+body.dark .popup-content hr,
+body.dark .popup-content-two hr,
+body.dark .popup-statics hr {
+  background-color: #555;
+}
+
+.popup-statics {
+    background-color: rgb(255, 255, 255);
+    padding: 40px 45px;
+    border-radius: 10px;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+    font-size: 1.2em;
+    line-height: 2.0em;
+    height: 380px;
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.show .popup-statics {
+    transform: scale(1);
+}
+
+body.dark .popup-statics {
+    background-color: #222;
+    color: #ddd;
 }
